@@ -81,6 +81,37 @@ The project's value is in **algorithm quality** and **breadth of information sou
 
 The scoring methodology, prompts, and schemas live in `windvane/llm/` and `windvane/scoring/`.
 
+## Roadmap / TODO 📋
+
+A pick-up-and-go list. **Before starting one, open an issue (use the matching template) to claim it** so we don't collide. Reference it in your PR with `Closes #NN` — we'll tick the box on merge.
+
+**Algorithm 🧠**
+- [ ] Upgrade semantic diff to segment/item-level alignment to cut whole-block noise
+- [ ] industry-drift: build a per-sector baseline lexicon and auto-subtract sector-wide drift
+- [ ] Feed financial features (cash / revenue / headcount) into shell grading to back the LLM
+- [ ] Make the z-score cold-start prior per-sector instead of one global μ/σ
+- [ ] A prompt few-shot bank: canonical positive / negative / shell samples for stability
+- [ ] Add an "evidence traceability" score to stage2 critique (can each quote be located in source?)
+
+**Information sources 📡**
+- [ ] 8-K material-event stream (M&A / exec changes / restructuring)
+- [ ] Semantic analysis of earnings-call transcripts
+- [ ] 13F / Form 4 institutional & insider ownership changes
+- [ ] News stream: cross-check sentiment against the filing's narrative
+- [ ] FRED / industry activity data as a macro control
+
+**Backtest / validation 📊**
+- [ ] Sector-neutral α (strip out beta and industry factors)
+- [ ] Event-study CAR instead of a plain T+N return
+- [ ] Grow fixtures to 50+ across more sectors
+- [ ] Add short / market-neutral baskets to test both sides of "information risk"
+
+**Engineering / DX 🛠️**
+- [ ] Incremental scan cache to avoid re-fetching and re-computing
+- [ ] Interactive web leaderboard (sort / filter)
+- [ ] Reproducibility: fixed random seed + snapshot tests
+- [ ] One-command Docker run
+
 ## License
 
 [MIT](LICENSE) — free to use, modify, distribute. PRs welcome.
