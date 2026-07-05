@@ -1,0 +1,32 @@
+name: 📡 New market information source · 新增信息源
+description: Wire in a new public data source as an information-risk dimension. · 接入新的公开数据源作为信息风险维度。
+labels: [data-source]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source · 数据源
+      placeholder: e.g. SEC 8-K, 13F/Form 4, Google News, FRED, ...
+    validations:
+      required: true
+  - type: textarea
+    id: signal
+    attributes:
+      label: What information-risk signal does it add · 它加了什么信息风险维度
+      description: How does it help tell real transformation from hype? · 它怎样帮助区分真转型与炒作?
+    validations:
+      required: true
+  - type: input
+    id: access
+    attributes:
+      label: Access · 获取方式
+      description: Free / API key / rate limits / terms of use. Public + free preferred. · 免费/需 key/限速/使用条款。优先免费公开。
+    validations:
+      required: true
+  - type: textarea
+    id: shape
+    attributes:
+      label: Proposed interface · 接口设想
+      description: Keep it a small, testable adapter (see windvane/edgar/ for the reference shape).
+    validations:
+      required: false

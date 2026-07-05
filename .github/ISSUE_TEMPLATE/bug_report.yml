@@ -1,0 +1,40 @@
+name: 🐛 Bug report · 缺陷报告
+description: Something is broken or produces wrong output. · 出错或结果不对。
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened · 现象
+      description: What did you do, and what went wrong? · 你做了什么,哪里出错了?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected · 预期
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce · 复现步骤
+      description: Exact commands. Redact any API keys. · 精确命令,注意打码 API key。
+      placeholder: |
+        uv run windvane scan --ticker DOCU
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment · 环境
+      description: OS, Python version (`uv run python -V`), package versions.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed any secrets (API keys, tokens) from logs pasted above. · 我已从粘贴内容中移除密钥。
+          required: true

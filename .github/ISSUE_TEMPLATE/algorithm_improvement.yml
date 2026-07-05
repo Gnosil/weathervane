@@ -1,0 +1,44 @@
+name: 🧠 Algorithm improvement · 算法改进
+description: Improve detection / scoring / de-hyping quality. · 改进识别、打分或祛魅质量。
+labels: [algorithm]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area · 方向
+      options:
+        - Semantic diff (stage-1 extract) · 语义对比
+        - Industry-drift filtering (stage-2 critique) · 行业漂移过滤
+        - Shell / repackaging grading · 套壳分级
+        - z-score / calibration · 评分校准
+        - Prompt engineering · prompt 工程
+        - Other · 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's suboptimal today · 现状哪里不够好
+      description: Point to a concrete case where the current output is wrong or weak. · 举一个当前输出偏弱/错误的具体例子。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change · 改进思路
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How to measure it's better · 怎么衡量变好了
+      description: e.g. fixtures it should flip, a metric, a backtest comparison. · 例如应翻转的 fixture、某个指标、回测对比。
+    validations:
+      required: false
+  - type: checkboxes
+    id: honesty
+    attributes:
+      label: Honesty check
+      options:
+        - label: This keeps Windvane a *information-risk lens*, not a buy/sell signal generator. · 这不会把项目变成买卖信号。
+          required: true
