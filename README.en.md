@@ -1,6 +1,9 @@
 # Windvane (风向标)
 
-**中文 · [English](README.en.md)**
+**[中文](README.md) · English**
+
+[![CI](https://github.com/Gnosil/weathervane/actions/workflows/ci.yml/badge.svg)](https://github.com/Gnosil/weathervane/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **Quantifying "information risk" in macro markets and single stocks with LLMs.** When a company claims an industry pivot in its filings, is it a *real structural change* — or just an industry buzzword, a shell repackaging, or a narrative that hasn't materialized? Windvane starts from public SEC filings and uses a two-stage LLM pipeline (extract + self-critique) to turn that "how-true-is-this" question into a comparable, back-testable score.
 

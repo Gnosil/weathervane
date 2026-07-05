@@ -2,6 +2,9 @@
 
 **中文 · [English](README.en.md)**
 
+[![CI](https://github.com/Gnosil/weathervane/actions/workflows/ci.yml/badge.svg)](https://github.com/Gnosil/weathervane/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 **用 LLM 量化分析宏观市场与个股的"信息风险"** —— 公司在财报里宣称的产业转型,到底是**真实结构性变化**,还是**行业流行词 / 套壳 / 尚未落地的叙事**?Windvane 从 SEC 公开文件出发,用两阶段 LLM(抽取 + 自我批判)把这种"信息真伪/风险"量化成可比较、可回测的分数。
 
 > 本工具输出基于公开信息的算法分析,**不构成任何投资建议**,仅供研究参考。
