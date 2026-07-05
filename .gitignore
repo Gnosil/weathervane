@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# uv
+uv.lock
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windvane runtime data (per-user, never commit) — top-level only,
+# so the packaged seed under windvane/data/ is still tracked.
+/data/
+reports/
+*.sqlite
+*.sqlite3
+*.db
+
+# Secrets
+.env
+.env.local
+*.key
+
+# Cassette tape - 实际 cassette 是 commit 的, 排除临时录制目录
+tests/_cassette_temp/
